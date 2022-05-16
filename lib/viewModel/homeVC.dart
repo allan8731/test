@@ -12,7 +12,7 @@ class ApiDataGenerator extends StateNotifier {
   //1. let it just be [] and control view using ture?A:B method
   //2. put initial value through generator
   //3. or......
-  ApiDataGenerator() : super([]);
+  ApiDataGenerator(String state) : super(state);
 
   void generate({required String endpoint, required dio}) async {
     //todo serialize data and make model subscribes this one
@@ -23,4 +23,4 @@ class ApiDataGenerator extends StateNotifier {
   }
 }
 
-final apiDataProvider = StateNotifierProvider((ref) => ApiDataGenerator());
+final apiDataProvider = StateNotifierProvider((ref) => ApiDataGenerator("users"));
