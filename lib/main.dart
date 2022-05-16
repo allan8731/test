@@ -6,7 +6,7 @@ import 'package:repopractice/view/home.dart';
 
 void main() {
   runApp(
-    const ProviderScope(child: MyApp()),
+const ProviderScope(  child: MyApp()),
   );
 }
 class MyApp extends StatelessWidget {
